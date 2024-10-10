@@ -42,7 +42,6 @@ const config = {
         },
         blog: {
           showReadingTime: true,
-          // routeBasePath: "/",
           feedOptions: {
             type: ["rss", "atom"],
             xslt: true,
@@ -61,29 +60,6 @@ const config = {
       },
     ],
   ],
-
-  plugins: [
-    [
-      "@docusaurus/plugin-content-docs",
-      {
-        id: "Hoidap247",
-        path: "Hoidap247",
-        routeBasePath: "Hoidap247",
-        sidebarPath: require.resolve("./sidebars-s1.js"),
-        versions: {},
-      },
-    ],
-    [
-      "@docusaurus/plugin-content-docs",
-      {
-        id: "docs-prod2",
-        path: "docs-prod2",
-        routeBasePath: "docs-prod2",
-        sidebarPath: require.resolve("./sidebars-s2.js"),
-      },
-    ],
-  ],
-
   /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
   themeConfig: {
     colorMode: {
@@ -111,7 +87,6 @@ const config = {
         //   disableVersioning: false,
         // },
         {
-          activeBaseRegex: "docs/(next|v8)",
           // type: "docSidebar",
           // sidebarId: "defaultSidebar",
           position: "left",
@@ -122,12 +97,8 @@ const config = {
               to: "/docs/Hoidap247/",
             },
             {
-              label: "Ts247",
-              to: "/docs/Ts247/",
-            },
-            {
-              label: "HuongDan",
-              to: "/docs/HuongDan",
+              label: "Hoidap247",
+              to: "/docs/Hoidap247/",
             },
           ],
         },
@@ -166,18 +137,5 @@ const config = {
     },
   },
 };
-
-function reverseSidebarItems(items) {
-  // Reverse items in categories
-  const result = items.map((item) => {
-    if (item.type === "category") {
-      return { ...item, items: reverseSidebarItems(item.items) };
-    }
-    return item;
-  });
-  // Reverse items at current level
-  result.reverse();
-  return result;
-}
 
 export default config;
