@@ -10,11 +10,8 @@ const config = {
   title: "Thành phát Documents",
   tagline: "Nơi lưu trữ cấp phát tài liệu dự án",
   favicon: "img/favicon.png",
-  // Set the production url of your site here
-  url: "https://your-docusaurus-site.example.com",
-  // Set the /<baseUrl>/ pathname under which your site is served
-  // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: "/",
+  url: "https://tantai-trng.github.io", // URL chính xác của bạn
+  baseUrl: "/ThanhPhat_docs/", // Đường dẫn đến dự án của bạn trên GitHub Pages
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
